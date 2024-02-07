@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shop Style</title>
     <link rel="stylesheet" href="./src/output.css">
+    <script src="https://kit.fontawesome.com/ef961f7c58.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1 class="h-10 bg-red-900">hello</h1>
+    <!--npx tailwindcss -i ./main/src/input.css -o ./main/src/output.css --watch-->
+
+    <!--Header of The Website Starts-->
+    <header>
+        <nav class="w-full h-16 bg-blue-500 flex justify-between ">
+            <div class="h-16 w-40 flex justify-center items-center sm:mx-5">
+                <span class="flex flex-col justify-center items-center cursor-pointer">
+                    <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
+                    <span class="text-[10px] mx-2 italic font-serif sm:text-sm">Shop For Quality</span>
+                </span>
+            </div>
+            <div class="hidden md:h-16 md:w-auto md:flex md:justify-center md:items-center">
+                <ul class="flex gap-5 h-auto w-auto lg:gap-x-12 xl:gap-x-16 2xl:gap-x-20">
+                    <li class="group text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
+                    <li class="text-lg font-semibold text-white cursor-pointer hover:text-black">About</li>
+                    <li class="text-lg font-semibold text-white cursor-pointer hover:text-black">Categories</li>
+                    <li class="text-lg font-semibold text-white cursor-pointer hover:text-black"><i class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
+                </ul>
+            </div>
+            <div class="h-16 w-auto flex justify-center items-center md:mx-3">
+                <input type="text" class="w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg 2xl:w-60" placeholder="Search For Products">
+            </div>
+            <div class="h-16 w-10  flex justify-center items-center mx-3 md:hidden">
+                <i class="fa-solid fa-bars fa-xl cursor-pointer" style="color: black;"></i>
+            </div>
+        </nav>
+    </header>
+    <!--Header of The Website Ends-->
+    <script src="project.js"></script>
 </body>
+
 </html>
