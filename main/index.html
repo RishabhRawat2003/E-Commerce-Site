@@ -9,12 +9,12 @@
     <script src="https://kit.fontawesome.com/ef961f7c58.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-slate-200">
     <!--npx tailwindcss -i ./main/src/input.css -o ./main/src/output.css --watch-->
 
     <!--Header of The Website Starts-->
-    <header>
-        <nav class="w-full h-16 bg-blue-500 flex justify-between ">
+    <header class="select-none">
+        <nav class="w-full h-16 bg-blue-500 flex justify-between z-20 ">
             <div class="h-16 w-40 flex justify-center items-center sm:mx-5">
                 <span class="flex flex-col justify-center items-center cursor-pointer">
                     <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
@@ -22,15 +22,15 @@
                 </span>
             </div>
             <div class="hidden md:h-16 md:w-auto md:flex md:justify-center md:items-center">
-                <ul class="flex gap-5 h-auto w-auto lg:gap-x-12 xl:gap-x-16 2xl:gap-x-20">
-                    <li class="group text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
-                    <li class="text-lg font-semibold text-white cursor-pointer hover:text-black">About</li>
-                    <li class="text-lg font-semibold text-white cursor-pointer hover:text-black">Categories</li>
-                    <li class="text-lg font-semibold text-white cursor-pointer hover:text-black"><i class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
+                <ul class="flex gap-5 h-auto w-auto text-white lg:gap-x-12 xl:gap-x-16 2xl:gap-x-20">
+                    <li class="text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
+                    <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black">About</li>
+                    <li class="group category text-lg duration-200 font-semibold cursor-pointer hover:text-black">Categories<i class="categoryIcon fa-solid fa-chevron-up fa-sm duration-200 ml-[1px] mt-[1px] lg:mx-2 lg:my-2"></i></li>
+                    <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black"><i class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
                 </ul>
             </div>
-            <div class="h-16 w-auto flex justify-center items-center md:mx-3">
-                <input type="text" class="w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg 2xl:w-60" placeholder="Search For Products">
+            <div class="h-16 w-auto flex justify-center items-center md:mr-3">
+                <input type="text" class="w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg xl:w-60 2xl:w-72" placeholder="Search For Products">
             </div>
             <div class="h-16 w-10  flex justify-center items-center mx-3 md:hidden">
                 <i class="fa-solid fa-bars fa-xl cursor-pointer" style="color: black;"></i>
@@ -38,6 +38,9 @@
         </nav>
     </header>
     <!--Header of The Website Ends-->
+    <div class="dropdown hidden p-1 md:-z-10 md:h-auto md:gap-3 md:w-full md:duration-500 md:absolute md:-top-72 md:ease-in-out md:bg-blue-500 md:text-black md:grid md:grid-cols-4 md:grid-rows-5 xl:grid-cols-2 xl:grid-rows-10 xl:w-96 xl:-top-80 xl:left-[40vw] 2xl:left-[44vw]"></div>
+    <div class="thumbnail h-80 absolute mx-2 -z-20 my-2 w-[97%] border-2 border-red-600 rounded-lg scroll-smooth overflow-y-hidden overflow-x-auto flex">
+    </div>
     <script src="project.js"></script>
 </body>
 
