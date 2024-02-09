@@ -1,4 +1,4 @@
-const allProducts  = async()=>{
+const allProducts = async () => {
 
     const response = await fetch('https://dummyjson.com/products?limit=100')
     const result = await response.json()
@@ -6,27 +6,27 @@ const allProducts  = async()=>{
 
 }
 
-const singleProductById  = async(id)=>{
+const singleProductById = async (id) => {
     const response = await fetch(`https://dummyjson.com/products/${id}`)
     const result = await response.json()
     return result
 }
 
-const searchProducts  = async(search)=>{
+const searchProducts = async (search) => {
 
     const response = await fetch(`https://dummyjson.com/products/search?q=${search}`)
     const result = await response.json()
     return result
 }
 
-const allProductsCategories  = async()=>{
+const allProductsCategories = async () => {
 
     const response = await fetch('https://dummyjson.com/products/categories')
     const result = await response.json()
     return result
 }
 
-const productsOfCategories  = async(category)=>{
+const productsOfCategories = async (category) => {
 
     const response = await fetch(`https://dummyjson.com/products/category/${category}`)
     const result = await response.json()
@@ -55,24 +55,34 @@ let products_Categories = productsOfCategories('tops')
 const category_li = document.querySelector('.category')
 const category_Icon = document.querySelector('.categoryIcon')
 const category_Dropdown = document.querySelector('.dropdown')
+const icon = document.querySelector('.icon')
+const sidebar = document.querySelector('.sidebar')
 
 
 
-category_li.addEventListener('click',function(e){
+icon.addEventListener('click', function (e) {
+    e.preventDefault()
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.toggle('fa-xmark')
+        sidebar.classList.toggle('right-0')
+    }
+})
+
+category_li.addEventListener('click', function (e) {
     e.preventDefault()
     category_li.classList.toggle('text-black')
     category_Icon.classList.toggle('fa-rotate-180')
     category_Dropdown.classList.toggle('md:top-16')
     category_Dropdown.classList.toggle('xl:top-[8vh]')
     category_Dropdown.classList.toggle('2xl:top-16')
-    
+
 })
 
 
 
-all_Categories.then((val)=>{
+all_Categories.then((val) => {
     const all_Catg = val
-    all_Catg.map((items)=>{
+    all_Catg.map((items) => {
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
@@ -81,10 +91,10 @@ all_Categories.then((val)=>{
     })
 })
 
-function categories_Items(items){
+function categories_Items(items) {
     const span = document.createElement('span')
-    span.innerHTML = items 
-    span.setAttribute('class','text-white cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
+    span.innerHTML = items
+    span.setAttribute('class', 'text-white cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
     category_Dropdown.appendChild(span)
 }
 
@@ -92,19 +102,10 @@ function categories_Items(items){
 
 //body Functionality
 const thumbnail_Div = document.querySelector('.thumbnail')
-
-
-all_Products.then((item)=>{
-    const all_item_product = item.products
-    all_item_product.map((items)=>{
-        //console.log(items.thumbnail)
-    })
-})
-
-
 const slides = document.querySelector('.slides');
 const bulletTracer = document.querySelector('.bullet-tracer');
 const images = document.querySelectorAll('.thumbnail img');
+/*
 
 let index = 0;
 
@@ -131,11 +132,11 @@ function updateSlider() {
   });
 }
 
-// Automatic slideshow
 function nextSlide() {
   index++;
   if (index === images.length) index = 0;
   updateSlider();
 }
 
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
+setInterval(nextSlide, 3000); 
+*/

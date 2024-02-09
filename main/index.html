@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/ef961f7c58.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-slate-200">
+<body class="bg-slate-200 overflow-hidden">
     <!--npx tailwindcss -i ./main/src/input.css -o ./main/src/output.css --watch-->
 
     <!--Header of The Website Starts-->
@@ -33,10 +33,18 @@
                 <input type="text" class="w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg xl:w-60 2xl:w-72" placeholder="Search For Products">
             </div>
             <div class="h-16 w-10  flex justify-center items-center mx-3 md:hidden">
-                <i class="fa-solid fa-bars fa-xl cursor-pointer" style="color: black;"></i>
+                <i class="icon fa-solid fa-bars fa-xl cursor-pointer" style="color: black;"></i>
             </div>
         </nav>
     </header>
+    <div class="sidebar absolute select-none rounded-sm -right-44 duration-300 ease-in-out h-40 w-40 flex flex-col justify-center items-center bg-blue-500 md:hidden">
+        <ul class="flex flex-col gap-5 h-auto w-auto text-white justify-center items-center">
+            <li class="text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
+            <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black">About</li>
+            <li class=" category hidden text-lg duration-200 font-semibold cursor-pointer hover:text-black">Categories</li>
+            <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black"><i class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
+        </ul>
+    </div>
     <!--Header of The Website Ends-->
     <div class="dropdown hidden p-1 md:-z-10 md:h-auto md:gap-3 md:w-full md:duration-500 md:absolute md:-top-72 md:ease-in-out md:bg-blue-500 md:text-black md:grid md:grid-cols-4 md:grid-rows-5 xl:grid-cols-2 xl:grid-rows-10 xl:w-96 xl:-top-80 xl:left-[40vw] 2xl:left-[44vw]"></div>
     <div class="thumbnail h-80 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden ">
