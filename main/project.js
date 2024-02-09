@@ -102,9 +102,40 @@ all_Products.then((item)=>{
 })
 
 
+const slides = document.querySelector('.slides');
+const bulletTracer = document.querySelector('.bullet-tracer');
+const images = document.querySelectorAll('.thumbnail img');
 
-/*
-setInterval(() => {
-    thumbnail_Div.scrollLeft += 430
-}, 4000);
-*/
+let index = 0;
+
+images.forEach((_, i) => {
+  const bullet = document.createElement('div');
+  bullet.setAttribute('class','bullet w-2 h-2 bg-white rounded-full cursor-pointer mx-1')
+  bulletTracer.appendChild(bullet);
+  bullet.addEventListener('click', () => {
+    index = i;
+    updateSlider();
+  });
+});
+
+
+function updateSlider() {
+  slides.style.transform = `translateX(${-index * 100}%)`;
+  const bullets = document.querySelectorAll('.bullet');
+  bullets.forEach((bullet, i) => {
+    if (i === index) {
+      bullet.setAttribute('class' ,'bullet w-2 h-2 bg-gray-700 rounded-full cursor-pointer mx-1')
+    } else {
+      bullet.setAttribute('class' ,'bullet w-2 h-2 bg-white rounded-full cursor-pointer mx-1')
+    }
+  });
+}
+
+// Automatic slideshow
+function nextSlide() {
+  index++;
+  if (index === images.length) index = 0;
+  updateSlider();
+}
+
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
