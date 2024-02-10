@@ -578,8 +578,16 @@ video {
   }
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .-right-44 {
@@ -598,12 +606,48 @@ video {
   right: 0px;
 }
 
+.-right-10 {
+  right: -2.5rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-28 {
+  left: 7rem;
+}
+
+.left-80 {
+  left: 20rem;
+}
+
 .-z-20 {
   z-index: -20;
 }
 
 .z-20 {
   z-index: 20;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .mx-1 {
@@ -635,8 +679,32 @@ video {
   margin-left: 1px;
 }
 
+.mt-80 {
+  margin-top: 20rem;
+}
+
 .mt-\[1px\] {
   margin-top: 1px;
+}
+
+.mt-96 {
+  margin-top: 24rem;
+}
+
+.-mt-80 {
+  margin-top: -20rem;
+}
+
+.mt-\[40vh\] {
+  margin-top: 40vh;
+}
+
+.mt-\[45vh\] {
+  margin-top: 45vh;
+}
+
+.mt-\[50vh\] {
+  margin-top: 50vh;
 }
 
 .flex {
@@ -669,6 +737,14 @@ video {
 
 .h-40 {
   height: 10rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-52 {
+  height: 13rem;
 }
 
 .h-6 {
@@ -711,12 +787,36 @@ video {
   width: 10rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
+.w-\[300\%\] {
+  width: 300%;
+}
+
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-\[600\%\] {
+  width: 600%;
+}
+
+.w-\[900\%\] {
+  width: 900%;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .min-w-full {
@@ -845,6 +945,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -891,6 +996,11 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -987,6 +1097,10 @@ video {
     position: absolute;
   }
 
+  .md\:relative {
+    position: relative;
+  }
+
   .md\:-top-72 {
     top: -18rem;
   }
@@ -997,6 +1111,18 @@ video {
 
   .md\:-z-10 {
     z-index: -10;
+  }
+
+  .md\:-z-0 {
+    z-index: 0;
+  }
+
+  .md\:z-10 {
+    z-index: 10;
+  }
+
+  .md\:-z-20 {
+    z-index: -20;
   }
 
   .md\:mr-3 {
@@ -1075,6 +1201,11 @@ video {
 
   .md\:ease-in-out {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md\:hover\:text-black:hover {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
 

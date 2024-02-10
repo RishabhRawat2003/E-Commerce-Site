@@ -35,18 +35,17 @@ const productsOfCategories = async (category) => {
 
 
 let all_Products = allProducts()
-//console.log(all_Products)
 
 let single_Product = singleProductById()
 //console.log(single_Product)
 
-let search_products = searchProducts()
+let search_products = searchProducts('dress')
 //console.log(search_products)
 
 let all_Categories = allProductsCategories()
 //console.log(all_Categories)
 
-let products_Categories = productsOfCategories('Smartphones')
+let products_Categories = productsOfCategories('home-decoration')
 //console.log(products_Categories)
 
 
@@ -96,7 +95,7 @@ all_Categories.then((val) => {
 function categories_Items(items) {
   const span = document.createElement('span')
   span.innerHTML = items
-  span.setAttribute('class', 'text-white cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
+  span.setAttribute('class', 'text-white select-none cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
   category_Dropdown.appendChild(span)
 }
 
@@ -188,3 +187,56 @@ function autoSliderMediumDevices() {
 
 autoSliderSmallDevices()
 autoSliderMediumDevices() 
+
+
+const mainAllProducts = document.querySelector('.mainAllProducts')
+
+all_Products.then((val)=>{
+  const allProductsDetails = val.products
+  const SomeProducts = allProductsDetails.slice(0,10)
+  SomeProducts.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+   //allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,image){
+  const div = document.createElement('div') //main div
+  const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
+  const div3 = document.createElement('div') //This div is for price and discount only
+  const img = document.createElement('img') //img of product
+  const p = document.createElement('p') //brand name
+  const span = document.createElement('span') //category of product
+  const span2 = document.createElement('span')//price
+  const span3 = document.createElement('span')//discount
+
+  div.setAttribute('class','h-40 w-96 flex flex-col justify-center items-center')
+  div.id = id
+  img.setAttribute('class','h-32 min-w-full object-contain')
+  p.setAttribute('class','w-auto text-sm font-bold text-black')
+  div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
+  span.setAttribute('class','text-sm font-semibold text-gray-700')
+  span2.setAttribute('class','text-sm font-bold text-black ')
+  span3.setAttribute('class','text-sm font-semibold text-black')
+  div3.setAttribute('class','h-auto w-auto')
+  img.src = image
+  p.innerHTML = brand
+  span.innerHTML = categoryOfProduct
+  span2.innerHTML += `$` + price
+  span3.innerHTML = discountPercentage
+  div3.appendChild(span2)
+  div3.appendChild(span3)
+  //div2.appendChild(span)
+  div2.appendChild(div3)
+  div.appendChild(img)
+  div.appendChild(p)
+  div.appendChild(span)
+  div.appendChild(div2)
+  mainAllProducts.appendChild(div)
+}

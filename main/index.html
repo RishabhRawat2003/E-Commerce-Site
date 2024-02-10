@@ -15,7 +15,7 @@
 
     <!--Header of The Website Starts-->
     <header class="select-none">
-        <nav class="w-full h-16 bg-blue-500 flex justify-between z-20 ">
+        <nav class="w-full h-16 bg-blue-500 flex justify-between relative z-30">
             <div class="h-16 w-40 flex justify-center items-center sm:mx-5">
                 <span class="flex flex-col justify-center items-center cursor-pointer">
                     <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
@@ -46,7 +46,7 @@
     </header>
     <!--sidebar for small devices starts -->
     <div
-        class="sidebar absolute select-none rounded-sm -right-44 duration-300 ease-in-out h-40 w-40 flex flex-col justify-center items-center bg-blue-500 md:hidden">
+        class="sidebar absolute z-10 select-none rounded-sm -right-44 duration-300 ease-in-out h-40 w-40 flex flex-col justify-center items-center bg-blue-500 md:hidden">
         <ul class="flex flex-col gap-5 h-auto w-auto text-white justify-center items-center">
             <li class="text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
             <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black">About</li>
@@ -63,37 +63,37 @@
 
     <!--DropDown Categories Start-->
     <div
-        class="dropdown hidden p-1 md:-z-10 md:h-auto md:gap-3 md:w-full md:duration-500 md:absolute md:-top-72 md:ease-in-out md:bg-blue-500 md:text-black md:grid md:grid-cols-4 md:grid-rows-5 xl:grid-cols-2 xl:grid-rows-10 xl:w-96 xl:-top-80 xl:left-[40vw] 2xl:left-[44vw]">
+        class="dropdown hidden p-1 md:z-10 md:h-auto md:gap-3 md:w-full md:duration-500 md:absolute md:-top-72 md:ease-in-out md:bg-blue-500 md:text-black md:grid md:grid-cols-4 md:grid-rows-5 xl:grid-cols-2 xl:grid-rows-10 xl:w-96 xl:-top-80 xl:left-[40vw] 2xl:left-[44vw]">
     </div>
     <!--DropDown Categories Ends-->
 
     <!--Slider Categories for Small devices starts-->
-    <div class="h-32 w-full flex justify-center items-center gap-2 sm:w-full md:hidden">
+    <div class="h-32 w-full mx-1 flex justify-center items-center gap-2 sm:w-full md:hidden">
         <div class="container h-28 w-full flex gap-3 overflow-x-scroll">
             <div class="h-auto w-auto grid grid-cols-4 flex-none gap-3">
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/laptop.jpg" alt="" class="min-w-full object-cover">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Laptops</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=laptops" target="_blank">Laptops</a></span>
                 </div>
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/phone.jpg" alt="" class="min-w-full object-cover">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Smartphones</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Smartphones" target="_blank">Smartphones</a></span>
                 </div>
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/men-watches.jpg" alt="" class="min-w-full object-cover overflow-hidden">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Watches</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Watches" target="_blank">Watches</a></span>
                 </div>
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/women-dress.jpg" alt="" class="min-w-full object-cover overflow-hidden">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Women-Dresses</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Women-Dresses" target="_blank">Women-Dresses</a></span>
                 </div>
             </div>
             <div class="h-auto w-auto grid grid-cols-4 flex-none gap-3">
@@ -101,25 +101,25 @@
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/men-shoes.jpg" alt="" class="min-w-full object-cover">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Men-shoes</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Men-shoes" target="_blank">Men-shoes</a></span>
                 </div>
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/furniture.jpg" alt="" class="min-w-full object-cover">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Furniture</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Furniture" target="_blank">Furniture</a></span>
                 </div>
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/sunglasses.jpg" alt="" class="min-w-full object-cover overflow-hidden">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Sunglasses</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Sunglasses" target="_blank">Sunglasses</a></span>
                 </div>
                 <div
                     class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
                     <img src="./img/small/women-jewellery.jpg" alt="" class="min-w-full object-cover overflow-hidden">
                     <span
-                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Women-Jewellery</span>
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline"><a href="product.html?param=Women-Jewellery" target="_blank">Women-Jewellery</a></span>
                 </div>
             </div>
         </div>
@@ -127,7 +127,8 @@
     <!--Slider Categories for Small devices Ends-->
 
     <!--autoSlider Starts-->
-    <div class="thumbnail h-80 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden md:hidden ">
+    <!--autoSlider for small devices Starts-->
+    <div class="thumbnail h-80 relative mx-auto my-1 w-full rounded-lg overflow-hidden md:hidden ">
         <div class="slides h-full w-full scroll-smooth flex ease-in-out duration-200 ">
             <img src="img/small/1.jpg" alt="img" class="min-w-full object-cover">
             <img src="img/small/2.jpg" alt="img" class="min-w-full object-cover">
@@ -140,24 +141,36 @@
         </div>
         <div class="bullet-tracer absolute bottom-3 left-2/4 -translate-x-2/4 flex"></div>
     </div>
-
-    <div class="thumbnail2 h-96 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden hidden md:block lg:h-[70vh]">
-        <div class="slides2 h-full w-full scroll-smooth flex ease-in-out duration-200 ">
-            <img src="img/medium/10.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/medium/9.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/medium/7.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/medium/6.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/medium/5.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/medium/4.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/medium/3.jpg" alt="img" class="min-w-full object-cover">  
-            <img src="img/medium/2.jpg" alt="img" class="min-w-full object-cover">  
-            <img src="img/medium/1.jpg" alt="img" class="min-w-full object-cover">  
+    <!--autoSlider for small devices ends-->
+    <!--autoSlider for medium devices starts-->
+    <div class="h-auto w-auto relative">
+        <div class="thumbnail2 h-96 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden hidden md:block lg:h-[70vh] xl:[90vh] 2xl:[99vh] ">
+            <div class="slides2 h-full w-full scroll-smooth flex ease-in-out duration-200 ">
+                <img src="img/medium/10.jpg" alt="img" class="min-w-full object-cover">
+                <img src="img/medium/9.jpg" alt="img" class="min-w-full object-cover">
+                <img src="img/medium/7.jpg" alt="img" class="min-w-full object-cover">
+                <img src="img/medium/6.jpg" alt="img" class="min-w-full object-cover">
+                <img src="img/medium/5.jpg" alt="img" class="min-w-full object-cover">
+                <img src="img/medium/4.jpg" alt="img" class="min-w-full object-cover">
+                <img src="img/medium/3.jpg" alt="img" class="min-w-full object-cover">  
+                <img src="img/medium/2.jpg" alt="img" class="min-w-full object-cover">  
+                <img src="img/medium/1.jpg" alt="img" class="min-w-full object-cover">  
+            </div>
+            <div class="bullet-tracer2 absolute bottom-3 left-2/4 -translate-x-2/4 flex"></div>
         </div>
-        <div class="bullet-tracer2 absolute bottom-3 left-2/4 -translate-x-2/4 flex"></div>
     </div>
-
+    
+    <!--autoSlider for medium devices ends-->
     <!--autoSlider ends-->
 
+    <div class="h-52 w-full mx-1 flex justify-center items-center gap-2">
+        <div class="h-52 w-full flex gap-3 overflow-x-scroll">
+            <div class="mainAllProducts h-48 w-full flex gap-3">
+
+            </div>
+        </div>
+    </div>
+    
     <!--Body Functionality Ends-->
 
 
