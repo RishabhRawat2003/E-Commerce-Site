@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Style</title>
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/chngBrowserApp.css">
     <script src="https://kit.fontawesome.com/ef961f7c58.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,30 +26,109 @@
                 <ul class="flex gap-5 h-auto w-auto text-white lg:gap-x-12 xl:gap-x-16 2xl:gap-x-20">
                     <li class="text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
                     <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black">About</li>
-                    <li class="group category text-lg duration-200 font-semibold cursor-pointer hover:text-black">Categories<i class="categoryIcon fa-solid fa-chevron-up fa-sm duration-200 ml-[1px] mt-[1px] lg:mx-2 lg:my-2"></i></li>
-                    <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black"><i class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
+                    <li class="group category text-lg duration-200 font-semibold cursor-pointer hover:text-black">
+                        Categories<i
+                            class="categoryIcon fa-solid fa-chevron-up fa-sm duration-200 ml-[1px] mt-[1px] lg:mx-2 lg:my-2"></i>
+                    </li>
+                    <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black"><i
+                            class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
                 </ul>
             </div>
             <div class="h-16 w-auto flex justify-center items-center md:mr-3">
-                <input type="text" class="w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg xl:w-60 2xl:w-72" placeholder="Search For Products">
+                <input type="text"
+                    class="w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg xl:w-60 2xl:w-72"
+                    placeholder="Search For Products">
             </div>
             <div class="h-16 w-10  flex justify-center items-center mx-3 md:hidden">
                 <i class="icon fa-solid fa-bars fa-xl cursor-pointer" style="color: black;"></i>
             </div>
         </nav>
     </header>
-    <div class="sidebar absolute select-none rounded-sm -right-44 duration-300 ease-in-out h-40 w-40 flex flex-col justify-center items-center bg-blue-500 md:hidden">
+    <!--sidebar for small devices starts -->
+    <div
+        class="sidebar absolute select-none rounded-sm -right-44 duration-300 ease-in-out h-40 w-40 flex flex-col justify-center items-center bg-blue-500 md:hidden">
         <ul class="flex flex-col gap-5 h-auto w-auto text-white justify-center items-center">
             <li class="text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
             <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black">About</li>
-            <li class=" category hidden text-lg duration-200 font-semibold cursor-pointer hover:text-black">Categories</li>
-            <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black"><i class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
+            <li class=" category hidden text-lg duration-200 font-semibold cursor-pointer hover:text-black">Categories
+            </li>
+            <li class="text-lg font-semibold duration-200 cursor-pointer hover:text-black"><i
+                    class="fa-regular fa-user fa-sm mx-2"></i>Login</li>
         </ul>
     </div>
+    <!--sidebar for small devices Ends -->
     <!--Header of The Website Ends-->
-    <div class="dropdown hidden p-1 md:-z-10 md:h-auto md:gap-3 md:w-full md:duration-500 md:absolute md:-top-72 md:ease-in-out md:bg-blue-500 md:text-black md:grid md:grid-cols-4 md:grid-rows-5 xl:grid-cols-2 xl:grid-rows-10 xl:w-96 xl:-top-80 xl:left-[40vw] 2xl:left-[44vw]"></div>
-    <div class="thumbnail h-80 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden ">
-        <div class="slides h-full w-full scroll-smooth flex ease-in-out duration-200">
+
+    <!--Body Functionality Starts-->
+
+    <!--DropDown Categories Start-->
+    <div
+        class="dropdown hidden p-1 md:-z-10 md:h-auto md:gap-3 md:w-full md:duration-500 md:absolute md:-top-72 md:ease-in-out md:bg-blue-500 md:text-black md:grid md:grid-cols-4 md:grid-rows-5 xl:grid-cols-2 xl:grid-rows-10 xl:w-96 xl:-top-80 xl:left-[40vw] 2xl:left-[44vw]">
+    </div>
+    <!--DropDown Categories Ends-->
+
+    <!--Slider Categories for Small devices starts-->
+    <div class="h-32 w-full flex justify-center items-center gap-2 sm:w-full md:hidden">
+        <div class="container h-28 w-full flex gap-3 overflow-x-scroll">
+            <div class="h-auto w-auto grid grid-cols-4 flex-none gap-3">
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/laptop.jpg" alt="" class="min-w-full object-cover">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Laptops</span>
+                </div>
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/phone.jpg" alt="" class="min-w-full object-cover">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Smartphones</span>
+                </div>
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/men-watches.jpg" alt="" class="min-w-full object-cover overflow-hidden">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Watches</span>
+                </div>
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/women-dress.jpg" alt="" class="min-w-full object-cover overflow-hidden">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Women-Dresses</span>
+                </div>
+            </div>
+            <div class="h-auto w-auto grid grid-cols-4 flex-none gap-3">
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/men-shoes.jpg" alt="" class="min-w-full object-cover">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Men-shoes</span>
+                </div>
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/furniture.jpg" alt="" class="min-w-full object-cover">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Furniture</span>
+                </div>
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/sunglasses.jpg" alt="" class="min-w-full object-cover overflow-hidden">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Sunglasses</span>
+                </div>
+                <div
+                    class="h-28 w-32 flex flex-col justify-center items-center border-2 border-gray-400 shadow-lg hover:bg-slate-300 hover:duration-200">
+                    <img src="./img/small/women-jewellery.jpg" alt="" class="min-w-full object-cover overflow-hidden">
+                    <span
+                        class="text-sm font-semibold cursor-pointer hover:text-blue-900 hover:underline">Women-Jewellery</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Slider Categories for Small devices Ends-->
+
+    <!--autoSlider Starts-->
+    <div class="thumbnail h-80 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden md:hidden ">
+        <div class="slides h-full w-full scroll-smooth flex ease-in-out duration-200 ">
             <img src="img/small/1.jpg" alt="img" class="min-w-full object-cover">
             <img src="img/small/2.jpg" alt="img" class="min-w-full object-cover">
             <img src="img/small/3.jpg" alt="img" class="min-w-full object-cover">
@@ -56,9 +136,31 @@
             <img src="img/small/4.jpg" alt="img" class="min-w-full object-cover">
             <img src="img/small/5.jpg" alt="img" class="min-w-full object-cover">
             <img src="img/small/6.jpg" alt="img" class="min-w-full object-cover">
-            <img src="img/small/7.jpg" alt="img" class="min-w-full object-cover"></div>
-        <div class="bullet-tracer absolute bottom-3 left-2/4 -translate-x-2/4 flex" ></div>
+            <img src="img/small/7.jpg" alt="img" class="min-w-full object-cover">  
+        </div>
+        <div class="bullet-tracer absolute bottom-3 left-2/4 -translate-x-2/4 flex"></div>
     </div>
+
+    <div class="thumbnail2 h-96 absolute mx-auto -z-20 my-1 w-full rounded-lg overflow-hidden hidden md:block lg:h-[70vh]">
+        <div class="slides2 h-full w-full scroll-smooth flex ease-in-out duration-200 ">
+            <img src="img/medium/10.jpg" alt="img" class="min-w-full object-cover">
+            <img src="img/medium/9.jpg" alt="img" class="min-w-full object-cover">
+            <img src="img/medium/7.jpg" alt="img" class="min-w-full object-cover">
+            <img src="img/medium/6.jpg" alt="img" class="min-w-full object-cover">
+            <img src="img/medium/5.jpg" alt="img" class="min-w-full object-cover">
+            <img src="img/medium/4.jpg" alt="img" class="min-w-full object-cover">
+            <img src="img/medium/3.jpg" alt="img" class="min-w-full object-cover">  
+            <img src="img/medium/2.jpg" alt="img" class="min-w-full object-cover">  
+            <img src="img/medium/1.jpg" alt="img" class="min-w-full object-cover">  
+        </div>
+        <div class="bullet-tracer2 absolute bottom-3 left-2/4 -translate-x-2/4 flex"></div>
+    </div>
+
+    <!--autoSlider ends-->
+
+    <!--Body Functionality Ends-->
+
+
     <script src="project.js"></script>
 </body>
 

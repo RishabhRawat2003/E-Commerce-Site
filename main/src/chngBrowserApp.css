@@ -1,0 +1,6 @@
+.container{
+    scrollbar-width: none;   
+}
+.container::-webkit-scrollbar{
+    display: none;/*This Code is a Alternative of the code written in the line number 14 */
+}
