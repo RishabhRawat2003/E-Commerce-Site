@@ -14,7 +14,7 @@
     <!--npx tailwindcss -i ./main/src/input.css -o ./main/src/output.css --watch-->
 
     <!--Header of The Website Starts-->
-    <header class="select-none w-full top-0">
+    <header class="select-none h-auto w-full top-0">
         <nav class="w-full h-16 bg-blue-500 flex justify-between relative z-30">
             <div class="h-16 w-40 flex justify-center items-center sm:mx-5">
                 <span class="flex flex-col justify-center items-center cursor-pointer">
@@ -46,7 +46,7 @@
     </header>
     <!--sidebar for small devices starts -->
     <div
-        class="sidebar absolute z-10 select-none rounded-sm -right-44 duration-300 ease-in-out h-40 w-40 flex flex-col justify-center items-center bg-blue-500 md:hidden">
+        class="sidebar absolute z-10  select-none rounded-sm -right-0 duration-300 ease-in-out h-40 w-40 hidden bg-blue-500 md:hidden">
         <ul class="flex flex-col gap-5 h-auto w-auto text-white justify-center items-center">
             <li class="text-lg text-black font-semibold cursor-pointer hover:text-black">Home</li>
             <li class="text-lg font-semibold cursor-pointer active:text-black">About</li>
@@ -66,7 +66,7 @@
     <!--DropDown Categories Ends-->
 
     <!--Slider Categories for Small devices starts-->
-    <div class="h-32 w-full mx-1 flex justify-center items-center gap-2 sm:w-full md:hidden">
+    <div class="h-32 w-[97%] mx-1 flex justify-center items-center gap-2 sm:w-full md:hidden">
         <div class="container h-28 w-full flex gap-3 overflow-x-scroll">
             <div class="h-auto w-auto grid grid-cols-4 flex-none gap-3">
                 <div

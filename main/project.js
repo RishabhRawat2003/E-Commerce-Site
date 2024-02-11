@@ -65,7 +65,7 @@ icon.addEventListener('click', function (e) {
   e.preventDefault()
   if (icon.classList.contains('fa-bars')) {
     icon.classList.toggle('fa-xmark')
-    sidebar.classList.toggle('right-0')
+    sidebar.classList.toggle('hidden')
   }
 })
 
