@@ -219,9 +219,9 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
-  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-lg font-bold text-black')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
   span.setAttribute('class','text-sm font-semibold text-gray-700')
@@ -292,9 +292,9 @@ function allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,im
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
-  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-lg font-bold text-black')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
   span.setAttribute('class','text-sm font-semibold text-gray-700')
@@ -381,9 +381,9 @@ function allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
-  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-lg font-bold text-black')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
   span.setAttribute('class','text-sm font-semibold text-gray-700')
@@ -469,9 +469,9 @@ function allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
-  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-lg font-bold text-black')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
   span.setAttribute('class','text-sm font-semibold text-gray-700')
@@ -573,9 +573,9 @@ function allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduc
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
-  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-lg font-bold text-black')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
   span.setAttribute('class','text-sm font-semibold text-gray-700')
