@@ -19,3 +19,31 @@
     display: none;
 }
 
+.allShoesProducts{
+    scrollbar-width: none;   
+}
+.allShoesProducts::-webkit-scrollbar{
+    display: none;
+}
+
+.allWatchesProducts{
+    scrollbar-width: none;   
+}
+.allWatchesProducts::-webkit-scrollbar{
+    display: none;
+}
+
+.allMenAccessories{
+    scrollbar-width: none;   
+}
+.allMenAccessories::-webkit-scrollbar{
+    display: none;
+}
+
+.allWomenAccessories{
+    scrollbar-width: none;   
+}
+.allWomenAccessories::-webkit-scrollbar{
+    display: none;
+}
+

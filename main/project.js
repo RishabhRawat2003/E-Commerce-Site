@@ -39,13 +39,13 @@ let all_Products = allProducts()
 let single_Product = singleProductById()
 //console.log(single_Product)
 
-let search_products = searchProducts('dress')
+let search_products = searchProducts('tops')
 //console.log(search_products)
 
 let all_Categories = allProductsCategories()
-//console.log(all_Categories)
+console.log(all_Categories)
 
-let products_Categories = productsOfCategories('home-decoration')
+let products_Categories = productsOfCategories('sunglasses')
 console.log(products_Categories)
 
 
@@ -189,6 +189,9 @@ autoSliderSmallDevices()
 autoSliderMediumDevices() 
 
 
+
+//All Products Slider Functionality Starts
+
 const mainAllProducts = document.querySelector('.mainAllProducts')
 
 all_Products.then((val)=>{
@@ -216,7 +219,7 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-300 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
   img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-lg font-bold text-black')
@@ -246,7 +249,6 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
 const leftArrow = document.querySelector('.leftArrow')
 const rightArrow = document.querySelector('.rightArrow')
 
-
 leftArrow.addEventListener('click',function(e){
   e.preventDefault()
   mainAllProducts.scrollLeft -=380
@@ -256,3 +258,360 @@ rightArrow.addEventListener('click',function(e){
   e.preventDefault()
   mainAllProducts.scrollLeft +=380
 })
+
+//All Products Slider Functionality Ends
+
+
+//Shoes Products Slider Functionality Starts
+
+const shoesProducts = document.querySelector('.allShoesProducts')
+let searchShoesProducts = searchProducts('shoes')
+
+searchShoesProducts.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+
+function allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,image){
+  const div = document.createElement('div') //main div
+  const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
+  const div3 = document.createElement('div') //This div is for price and discount only
+  const img = document.createElement('img') //img of product
+  const p = document.createElement('p') //brand name
+  const span = document.createElement('span') //category of product
+  const span2 = document.createElement('span')//price
+  const span3 = document.createElement('span')//discount
+
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.id = id
+  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  p.setAttribute('class','w-auto text-lg font-bold text-black')
+  div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
+  span.setAttribute('class','text-sm font-semibold text-gray-700')
+  span2.setAttribute('class','text-lg mx-2 font-bold text-black ')
+  span3.setAttribute('class','text-sm mx-1 font-semibold text-gray-700 line-through')
+  div3.setAttribute('class','h-auto w-auto')
+  img.src = image
+  p.innerHTML = brand
+  span.innerHTML = categoryOfProduct
+  span2.innerHTML += `$` + price
+  span3.innerHTML += `$` + discountPercentage
+  div3.appendChild(span2)
+  div3.appendChild(span3)
+  //div2.appendChild(span)
+  //div2.appendChild(div3)
+  div.appendChild(img)
+  div.appendChild(p)
+  div.appendChild(span)
+  div.appendChild(div2)
+  div.appendChild(div3)
+  shoesProducts.appendChild(div)
+}
+
+const leftArrow1 = document.querySelector('.leftArrow1')
+const rightArrow1 = document.querySelector('.rightArrow1')
+
+
+leftArrow1.addEventListener('click',function(e){
+  e.preventDefault()
+  shoesProducts.scrollLeft -=380
+})
+
+rightArrow1.addEventListener('click',function(e){
+  e.preventDefault()
+  shoesProducts.scrollLeft +=380
+})
+
+//Shoes Products Slider Functionality Ends
+
+
+
+//Watches Products Slider Functionality Starts
+
+const watchesProducts = document.querySelector('.allWatchesProducts')
+let mens_watches = productsOfCategories('mens-watches')
+let womens_watches = productsOfCategories('womens-watches')
+
+
+mens_watches.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+womens_watches.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+function allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,image){
+  const div = document.createElement('div') //main div
+  const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
+  const div3 = document.createElement('div') //This div is for price and discount only
+  const img = document.createElement('img') //img of product
+  const p = document.createElement('p') //brand name
+  const span = document.createElement('span') //category of product
+  const span2 = document.createElement('span')//price
+  const span3 = document.createElement('span')//discount
+
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.id = id
+  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  p.setAttribute('class','w-auto text-lg font-bold text-black')
+  div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
+  span.setAttribute('class','text-sm font-semibold text-gray-700')
+  span2.setAttribute('class','text-lg mx-2 font-bold text-black ')
+  span3.setAttribute('class','text-sm mx-1 font-semibold text-gray-700 line-through')
+  div3.setAttribute('class','h-auto w-auto')
+  img.src = image
+  p.innerHTML = brand
+  span.innerHTML = categoryOfProduct
+  span2.innerHTML += `$` + price
+  span3.innerHTML += `$` + discountPercentage
+  div3.appendChild(span2)
+  div3.appendChild(span3)
+  //div2.appendChild(span)
+  //div2.appendChild(div3)
+  div.appendChild(img)
+  div.appendChild(p)
+  div.appendChild(span)
+  div.appendChild(div2)
+  div.appendChild(div3)
+  watchesProducts.appendChild(div)
+}
+
+const leftArrow2 = document.querySelector('.leftArrow2')
+const rightArrow2 = document.querySelector('.rightArrow2')
+
+
+leftArrow2.addEventListener('click',function(e){
+  e.preventDefault()
+  watchesProducts.scrollLeft -=380
+})
+
+rightArrow2.addEventListener('click',function(e){
+  e.preventDefault()
+  watchesProducts.scrollLeft +=380
+})
+
+//Watches Products Slider Functionality Ends
+
+
+//All Men's Accessories Products Slider Functionality Starts
+
+const mensAccessories = document.querySelector('.allMenAccessories')
+let mens_Shirt = productsOfCategories('mens-shirts')
+let mens_fragrence = productsOfCategories('fragrances')
+
+
+mens_Shirt.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+mens_fragrence.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+function allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image){
+  const div = document.createElement('div') //main div
+  const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
+  const div3 = document.createElement('div') //This div is for price and discount only
+  const img = document.createElement('img') //img of product
+  const p = document.createElement('p') //brand name
+  const span = document.createElement('span') //category of product
+  const span2 = document.createElement('span')//price
+  const span3 = document.createElement('span')//discount
+
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.id = id
+  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  p.setAttribute('class','w-auto text-lg font-bold text-black')
+  div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
+  span.setAttribute('class','text-sm font-semibold text-gray-700')
+  span2.setAttribute('class','text-lg mx-2 font-bold text-black ')
+  span3.setAttribute('class','text-sm mx-1 font-semibold text-gray-700 line-through')
+  div3.setAttribute('class','h-auto w-auto')
+  img.src = image
+  p.innerHTML = brand
+  span.innerHTML = categoryOfProduct
+  span2.innerHTML += `$` + price
+  span3.innerHTML += `$` + discountPercentage
+  div3.appendChild(span2)
+  div3.appendChild(span3)
+  //div2.appendChild(span)
+  //div2.appendChild(div3)
+  div.appendChild(img)
+  div.appendChild(p)
+  div.appendChild(span)
+  div.appendChild(div2)
+  div.appendChild(div3)
+  mensAccessories.appendChild(div)
+}
+
+const leftArrow3 = document.querySelector('.leftArrow3')
+const rightArrow3 = document.querySelector('.rightArrow3')
+
+
+leftArrow3.addEventListener('click',function(e){
+  e.preventDefault()
+  mensAccessories.scrollLeft -=380
+})
+
+rightArrow3.addEventListener('click',function(e){
+  e.preventDefault()
+  mensAccessories.scrollLeft +=380
+})
+
+//All Men's Accessories Products Slider Functionality Ends
+
+
+//All Women's Accessories Products Slider Functionality Starts
+
+const womensAccessories = document.querySelector('.allWomenAccessories')
+let women_dresses = productsOfCategories('womens-dresses')
+let womens_tops = productsOfCategories('tops')
+let women_bags = productsOfCategories('womens-bags')
+
+
+
+women_dresses.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+womens_tops.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+women_bags.then((val)=>{
+  const allProductsDetails = val.products
+  allProductsDetails.map((items)=>{
+    //console.log(items)
+    const id = items.id
+    const price = items.price
+    const discountPercentage = items.discountPercentage
+    const brand = items.brand
+    const categoryOfProduct = items.category 
+    const image = items.thumbnail
+    allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+  })
+})
+
+function allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image){
+  const div = document.createElement('div') //main div
+  const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
+  const div3 = document.createElement('div') //This div is for price and discount only
+  const img = document.createElement('img') //img of product
+  const p = document.createElement('p') //brand name
+  const span = document.createElement('span') //category of product
+  const span2 = document.createElement('span')//price
+  const span3 = document.createElement('span')//discount
+
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  div.id = id
+  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  p.setAttribute('class','w-auto text-lg font-bold text-black')
+  div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
+  span.setAttribute('class','text-sm font-semibold text-gray-700')
+  span2.setAttribute('class','text-lg mx-2 font-bold text-black ')
+  span3.setAttribute('class','text-sm mx-1 font-semibold text-gray-700 line-through')
+  div3.setAttribute('class','h-auto w-auto')
+  img.src = image
+  p.innerHTML = brand
+  span.innerHTML = categoryOfProduct
+  span2.innerHTML += `$` + price
+  span3.innerHTML += `$` + discountPercentage
+  div3.appendChild(span2)
+  div3.appendChild(span3)
+  //div2.appendChild(span)
+  //div2.appendChild(div3)
+  div.appendChild(img)
+  div.appendChild(p)
+  div.appendChild(span)
+  div.appendChild(div2)
+  div.appendChild(div3)
+  womensAccessories.appendChild(div)
+}
+
+const leftArrow4 = document.querySelector('.leftArrow4')
+const rightArrow4 = document.querySelector('.rightArrow4')
+
+
+leftArrow4.addEventListener('click',function(e){
+  e.preventDefault()
+  womensAccessories.scrollLeft -=380
+})
+
+rightArrow4.addEventListener('click',function(e){
+  e.preventDefault()
+  womensAccessories.scrollLeft +=380
+})
+
+//Watches Products Slider Functionality Ends
+
