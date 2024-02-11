@@ -2,5 +2,20 @@
     scrollbar-width: none;   
 }
 .container::-webkit-scrollbar{
-    display: none;/*This Code is a Alternative of the code written in the line number 14 */
+    display: none;
 }
+
+.mainAllProducts{
+    scrollbar-width: none;   
+}
+.mainAllProducts::-webkit-scrollbar{
+    display: none;
+}
+
+.main{
+    scrollbar-width: none;   
+}
+.main::-webkit-scrollbar{
+    display: none;
+}
+

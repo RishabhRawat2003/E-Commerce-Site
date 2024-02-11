@@ -46,7 +46,7 @@ let all_Categories = allProductsCategories()
 //console.log(all_Categories)
 
 let products_Categories = productsOfCategories('home-decoration')
-//console.log(products_Categories)
+console.log(products_Categories)
 
 
 
@@ -202,7 +202,7 @@ all_Products.then((val)=>{
     const brand = items.brand
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-   //allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,image)
+   allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,image)
   })
 })
 
@@ -216,27 +216,43 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','h-40 w-96 flex flex-col justify-center items-center')
+  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 hover:bg-slate-300 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
   div.id = id
-  img.setAttribute('class','h-32 min-w-full object-contain')
-  p.setAttribute('class','w-auto text-sm font-bold text-black')
+  img.setAttribute('class','h-32 w-full object-contain group-hover:scale-105 hover:object-contain duration-200')
+  p.setAttribute('class','w-auto text-lg font-bold text-black')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
   span.setAttribute('class','text-sm font-semibold text-gray-700')
-  span2.setAttribute('class','text-sm font-bold text-black ')
-  span3.setAttribute('class','text-sm font-semibold text-black')
+  span2.setAttribute('class','text-lg mx-2 font-bold text-black ')
+  span3.setAttribute('class','text-sm mx-1 font-semibold text-gray-700 line-through')
   div3.setAttribute('class','h-auto w-auto')
   img.src = image
   p.innerHTML = brand
   span.innerHTML = categoryOfProduct
   span2.innerHTML += `$` + price
-  span3.innerHTML = discountPercentage
+  span3.innerHTML += `$` + discountPercentage
   div3.appendChild(span2)
   div3.appendChild(span3)
   //div2.appendChild(span)
-  div2.appendChild(div3)
+  //div2.appendChild(div3)
   div.appendChild(img)
   div.appendChild(p)
   div.appendChild(span)
   div.appendChild(div2)
+  div.appendChild(div3)
   mainAllProducts.appendChild(div)
 }
+
+
+const leftArrow = document.querySelector('.leftArrow')
+const rightArrow = document.querySelector('.rightArrow')
+
+
+leftArrow.addEventListener('click',function(e){
+  e.preventDefault()
+  mainAllProducts.scrollLeft -=380
+})
+
+rightArrow.addEventListener('click',function(e){
+  e.preventDefault()
+  mainAllProducts.scrollLeft +=380
+})
