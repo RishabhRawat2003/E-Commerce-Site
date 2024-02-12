@@ -43,7 +43,7 @@ let search_products = searchProducts('tops')
 //console.log(search_products)
 
 let all_Categories = allProductsCategories()
-//console.log(all_Categories)
+console.log(all_Categories)
 
 let products_Categories = productsOfCategories('Mens-Shoes')
 //console.log(products_Categories)
@@ -95,7 +95,7 @@ all_Categories.then((val) => {
 function categories_Items(items) {
   const anchor = document.createElement('a')
   anchor.innerHTML = items
-  anchor.href = `products.html?param=${items}`
+  anchor.href = `someproducts.html?param=${items}`
   anchor.setAttribute('class', 'text-white select-none cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
   category_Dropdown.appendChild(anchor)
 }
