@@ -53,3 +53,10 @@
 .imagesDiv::-webkit-scrollbar{
     display: none;
 }
+
+.othersRelatedProductsSlider{
+    scrollbar-width: none;   
+}
+.othersRelatedProductsSlider::-webkit-scrollbar{
+    display: none;
+}

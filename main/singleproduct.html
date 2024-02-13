@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./src/chngBrowserApp.css">
     <script src="https://kit.fontawesome.com/ef961f7c58.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="bg-slate-200">
     <!--Header Starts-->
     <header class="select-none h-auto w-full top-0">
@@ -31,10 +33,32 @@
     <div class="h-auto w-[98%] mx-auto my-2 rounded-lg flex flex-col py-3 bg-white">
         <div class="h-80 w-[98%] mx-auto my-2 rounded-lg flex flex-col py-3 md:h-[70vh]">
             <div class="imagesDiv w-full scroll-smooth h-full gap-1 flex overflow-x-scroll"></div>
-            <div class="leftArrow border-[1px] border-black h-16 w-10 flex justify-center items-center absolute top-52 left-[2.1vw] rounded-sm opacity-30 bg-white cursor-pointer active:opacity-75 md:hover:opacity-75 md:top-72"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></div>
-            <div class="rightArrow border-[1px] border-black h-16 w-10 flex justify-center items-center absolute top-52 right-[2.1vw] rounded-sm opacity-30 bg-white cursor-pointer active:opacity-75 md:hover:opacity-75 md:top-72"><i class="fa-solid fa-angle-right fa-lg" style="color: #000000;"></i></div>
+            <div
+                class="leftArrow border-[1px] border-black h-16 w-10 flex justify-center items-center absolute top-52 left-[2.1vw] rounded-sm opacity-30 bg-white cursor-pointer active:opacity-75 md:hover:opacity-75 md:top-72">
+                <i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></div>
+            <div
+                class="rightArrow border-[1px] border-black h-16 w-10 flex justify-center items-center absolute top-52 right-[2.1vw] rounded-sm opacity-30 bg-white cursor-pointer active:opacity-75 md:hover:opacity-75 md:top-72">
+                <i class="fa-solid fa-angle-right fa-lg" style="color: #000000;"></i></div>
         </div>
         <div class="productDetail h-auto w-full flex flex-col"></div>
+        <div class="h-auto w-full my-4 flex flex-col gap-2">
+            <div class="h-auto w-auto flex justify-between">
+                <h1 class="header h-auto w-auto text-black text-sm text-semibold mx-2 md:text-lg md:text-bold lg:ml-5">
+                </h1>
+                <div class="h-auto w-auto flex gap-1.5 mr-3">
+                    <div
+                        class="leftArrow2 h-auto w-5 bg-blue-500 flex justify-center items-center rounded-full cursor-pointer active:scale-110 lg:hover:scale-110 duration-200 md:w-7 xl:hidden">
+                        <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                    </div>
+                    <div
+                        class="rightArrow2 h-auto w-5 bg-blue-500 flex justify-center items-center rounded-full cursor-pointer active:scale-110 lg:hover:scale-110 duration-200 md:w-7 xl:hidden">
+                        <i class="fa-solid fa-arrow-left fa-rotate-180" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="othersRelatedProductsSlider w-full scroll-smooth px-2 h-full gap-1 flex overflow-x-scroll">
+            </div>
+        </div>
     </div>
     <!--Main Content Starts-->
 
@@ -50,7 +74,8 @@
             <div class="h-full w-32 hidden lg:block">
                 <h1 class="mt-4">
                     <span class="flex flex-col justify-center items-center cursor-pointer">
-                        <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
+                        <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop
+                            Style</span>
                         <span class="text-[10px] mx-2 italic font-serif sm:text-sm">Shop For Quality</span>
                     </span>
                 </h1>
@@ -165,9 +190,13 @@
             </div>
         </div>
         <div class="mt-2 h-[2px] w-full bg-black">
-        <div class="h-11 w-full flex justify-center items-center lg:h-16"><p class="text-white text-sm font-semibold md:text-base xl:text-lg">&#169 2024 Shop Style,Inc.All Right Reserved</p></div>
+            <div class="h-11 w-full flex justify-center items-center lg:h-16">
+                <p class="text-white text-sm font-semibold md:text-base xl:text-lg">&#169 2024 Shop Style,Inc.All Right
+                    Reserved</p>
+            </div>
     </footer>
     <!--Footer Ends-->
     <script src="singleproduct.js"></script>
 </body>
+
 </html>

@@ -35,7 +35,7 @@ const productsOfCategories = async (category) => {
 
 
 let all_Products = allProducts()
-console.log(all_Products)
+//console.log(all_Products)
 
 let single_Product = singleProductById()
 //console.log(single_Product)
@@ -44,7 +44,7 @@ let search_products = searchProducts('tops')
 //console.log(search_products)
 
 let all_Categories = allProductsCategories()
-console.log(all_Categories)
+//console.log(all_Categories)
 
 let products_Categories = productsOfCategories('Mens-Shoes')
 //console.log(products_Categories)
