@@ -38,12 +38,12 @@ if (paramValue === 'Laptops') {
             header.innerHTML = laptops + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     smartphonesProducts.then((items) => {
@@ -51,12 +51,12 @@ if (paramValue === 'Laptops') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     automativeProducts.then((items) => {
@@ -64,12 +64,12 @@ if (paramValue === 'Laptops') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -88,12 +88,12 @@ else if (paramValue === 'Smartphones') {
             header.innerHTML = smartphones + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     laptopsProducts.then((items) => {
@@ -101,12 +101,12 @@ else if (paramValue === 'Smartphones') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     automativeProducts.then((items) => {
@@ -114,12 +114,12 @@ else if (paramValue === 'Smartphones') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 
@@ -139,12 +139,12 @@ else if (paramValue === 'Mens-watches') {
             header.innerHTML = watchesMen + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensWatchesProducts.then((items) => {
@@ -152,12 +152,12 @@ else if (paramValue === 'Mens-watches') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     sunglassesProducts.then((items) => {
@@ -165,12 +165,12 @@ else if (paramValue === 'Mens-watches') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 
@@ -190,12 +190,12 @@ else if (paramValue === 'Womens-dresses') {
             header.innerHTML = womensDresses + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     topsProducts.then((items) => {
@@ -203,12 +203,12 @@ else if (paramValue === 'Womens-dresses') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     skinCareProducts.then((items) => {
@@ -216,12 +216,12 @@ else if (paramValue === 'Womens-dresses') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 
@@ -242,12 +242,12 @@ else if (paramValue === 'Mens-shoes') {
             header.innerHTML = mensShoes + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensShoesProducts.then((items) => {
@@ -255,12 +255,12 @@ else if (paramValue === 'Mens-shoes') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     mensShirtsProducts.then((items) => {
@@ -268,12 +268,12 @@ else if (paramValue === 'Mens-shoes') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 
@@ -293,12 +293,12 @@ else if (paramValue === 'Furniture') {
             header.innerHTML = furniture + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     homeDecorationsProducts.then((items) => {
@@ -306,12 +306,12 @@ else if (paramValue === 'Furniture') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     lightingProducts.then((items) => {
@@ -319,12 +319,12 @@ else if (paramValue === 'Furniture') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 
@@ -344,12 +344,12 @@ else if (paramValue === 'Sunglasses') {
             header.innerHTML = sunglasses + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     fragranceProdcuts.then((items) => {
@@ -357,12 +357,12 @@ else if (paramValue === 'Sunglasses') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     mensShirtsProdcuts.then((items) => {
@@ -370,12 +370,12 @@ else if (paramValue === 'Sunglasses') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 
@@ -395,12 +395,12 @@ else if (paramValue === 'Womens-jewellery') {
             header.innerHTML = womensJewellery + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensBagsProducts.then((items) => {
@@ -408,12 +408,12 @@ else if (paramValue === 'Womens-jewellery') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     skinCareProducts.then((items) => {
@@ -421,12 +421,12 @@ else if (paramValue === 'Womens-jewellery') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -445,12 +445,12 @@ else if (paramValue === 'Fragrances') {
             header.innerHTML = fragrance + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     skinCareProducts.then((items) => {
@@ -458,12 +458,12 @@ else if (paramValue === 'Fragrances') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     topProducts.then((items) => {
@@ -471,12 +471,12 @@ else if (paramValue === 'Fragrances') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -495,12 +495,12 @@ else if (paramValue === 'Skincare') {
             header.innerHTML = skincare + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     fragranceProducts.then((items) => {
@@ -508,12 +508,12 @@ else if (paramValue === 'Skincare') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     womensWatchesProducts.then((items) => {
@@ -521,12 +521,12 @@ else if (paramValue === 'Skincare') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -545,12 +545,12 @@ else if (paramValue === 'Groceries') {
             header.innerHTML = groceries + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     homeDecorationProducts.then((items) => {
@@ -558,12 +558,12 @@ else if (paramValue === 'Groceries') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     furnitureProducts.then((items) => {
@@ -571,12 +571,12 @@ else if (paramValue === 'Groceries') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -595,12 +595,12 @@ else if (paramValue === 'Home-decoration') {
             header.innerHTML = homeDecoration + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     furnitureProducts.then((items) => {
@@ -608,12 +608,12 @@ else if (paramValue === 'Home-decoration') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     lightingProducts.then((items) => {
@@ -621,12 +621,12 @@ else if (paramValue === 'Home-decoration') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -645,12 +645,12 @@ else if (paramValue === 'Tops') {
             header.innerHTML = tops + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensDressesProducts.then((items) => {
@@ -658,12 +658,12 @@ else if (paramValue === 'Tops') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     skinCareProducts.then((items) => {
@@ -671,12 +671,12 @@ else if (paramValue === 'Tops') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -695,12 +695,12 @@ else if (paramValue === 'Womens-shoes') {
             header.innerHTML = womensShoes + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensBagsProducts.then((items) => {
@@ -708,12 +708,12 @@ else if (paramValue === 'Womens-shoes') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     sunglassesProducts.then((items) => {
@@ -721,12 +721,12 @@ else if (paramValue === 'Womens-shoes') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -745,12 +745,12 @@ else if (paramValue === 'Mens-shirts') {
             header.innerHTML = MensShirts + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     mensShoesProducts.then((items) => {
@@ -758,12 +758,12 @@ else if (paramValue === 'Mens-shirts') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     mensWatchesProducts.then((items) => {
@@ -771,12 +771,12 @@ else if (paramValue === 'Mens-shirts') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -795,12 +795,12 @@ else if (paramValue === 'Womens-watches') {
             header.innerHTML = womensWatches + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     mensWatchesProducts.then((items) => {
@@ -808,12 +808,12 @@ else if (paramValue === 'Womens-watches') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     womensBagsProducts.then((items) => {
@@ -821,12 +821,12 @@ else if (paramValue === 'Womens-watches') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -845,12 +845,12 @@ else if (paramValue === 'Womens-bags') {
             header.innerHTML = womensBags + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensJewelleryProducts.then((items) => {
@@ -858,12 +858,12 @@ else if (paramValue === 'Womens-bags') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     fragrancesProducts.then((items) => {
@@ -871,12 +871,12 @@ else if (paramValue === 'Womens-bags') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -895,12 +895,12 @@ else if (paramValue === 'Automotive') {
             header.innerHTML = automotive + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     laptopsProducts.then((items) => {
@@ -908,12 +908,12 @@ else if (paramValue === 'Automotive') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     smartphonesProducts.then((items) => {
@@ -921,12 +921,12 @@ else if (paramValue === 'Automotive') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -945,12 +945,12 @@ else if (paramValue === 'Motorcycle') {
             header.innerHTML = motorcycle + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     sunglassesProducts.then((items) => {
@@ -958,12 +958,12 @@ else if (paramValue === 'Motorcycle') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     automotiveProducts.then((items) => {
@@ -971,12 +971,12 @@ else if (paramValue === 'Motorcycle') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -996,12 +996,12 @@ else if (paramValue === 'Lighting') {
             header.innerHTML = lighting + ':'
             header2.innerHTML = 'Others Similar Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     homeDecorationProducts.then((items) => {
@@ -1009,12 +1009,12 @@ else if (paramValue === 'Lighting') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc1(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc1(id, price, discountPercentage, title, category, image)
         })
     })
     furnitureProducts.then((items) => {
@@ -1022,12 +1022,12 @@ else if (paramValue === 'Lighting') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            otherProductsFunc2(id, price, discountPercentage, brand, category, image)
+            otherProductsFunc2(id, price, discountPercentage, title, category, image)
         })
     })
 }
@@ -1039,12 +1039,13 @@ else if (paramValue === 'Allproducts') {
         allProductsItems.map((items)=>{
             header.innerHTML = 'All Products :'
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
+            footer.classList.toggle('hidden')
         })
     })
 }
@@ -1068,12 +1069,12 @@ else if (paramValue === 'MensAccessories') {
             //console.log(items)
             header.innerHTML = "Men's Accessories :"
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     mensShoesProducts.then((items) => {
@@ -1081,12 +1082,12 @@ else if (paramValue === 'MensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     mensWatchesProducts.then((items) => {
@@ -1094,12 +1095,12 @@ else if (paramValue === 'MensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     sunglassesProducts.then((items) => {
@@ -1107,12 +1108,12 @@ else if (paramValue === 'MensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     fragrancesProducts.then((items) => {
@@ -1120,12 +1121,12 @@ else if (paramValue === 'MensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     motorcycleProducts.then((items) => {
@@ -1133,12 +1134,13 @@ else if (paramValue === 'MensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
+            footer.classList.toggle('hidden')
         })
     })
 }
@@ -1164,12 +1166,12 @@ else if (paramValue === 'WomensAccessories') {
             //console.log(items)
             header.innerHTML = "Women's Accessories :"
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensDressesProducts.then((items) => {
@@ -1177,12 +1179,12 @@ else if (paramValue === 'WomensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensShoesProducts.then((items) => {
@@ -1190,12 +1192,12 @@ else if (paramValue === 'WomensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensWatchesProducts.then((items) => {
@@ -1203,12 +1205,12 @@ else if (paramValue === 'WomensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensBagsProducts.then((items) => {
@@ -1216,12 +1218,12 @@ else if (paramValue === 'WomensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     womensJewelleryProducts.then((items) => {
@@ -1229,12 +1231,12 @@ else if (paramValue === 'WomensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
         })
     })
     skincareProducts.then((items) => {
@@ -1242,19 +1244,20 @@ else if (paramValue === 'WomensAccessories') {
         itemsProducts.map((items) => {
             //console.log(items)
             let id = items.id
-            let brand = items.brand
+            let title = items.title.slice(0,22)
             let category = items.category
             let price = items.price
             let discountPercentage = items.discountPercentage
             let image = items.thumbnail
-            mainProductsFunc(id, price, discountPercentage, brand, category, image)
+            mainProductsFunc(id, price, discountPercentage, title, category, image)
+            footer.classList.toggle('hidden')
         })
     })
 }
 
 
-function mainProductsFunc(id, price, discountPercentage, brand, categoryOfProduct, image) {
-    const div = document.createElement('div') //main div
+function mainProductsFunc(id, price, discountPercentage, title, categoryOfProduct, image) {
+    const anchor = document.createElement('a') //main 
     const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
     const div3 = document.createElement('div') //This div is for price and discount only
     const img = document.createElement('img') //img of product
@@ -1263,8 +1266,8 @@ function mainProductsFunc(id, price, discountPercentage, brand, categoryOfProduc
     const span2 = document.createElement('span')//price
     const span3 = document.createElement('span')//discount
 
-    div.setAttribute('class', 'group h-52 p-1 w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:w-[30vw] lg:w-[20vw] xl:w-[15vw]')
-    div.id = id
+    anchor.setAttribute('class', 'group h-52 p-1 w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:w-[30vw] lg:w-[20vw] xl:w-[15vw]')
+    anchor.href =`./singleproduct.html?param=${id}`
     img.setAttribute('class', 'h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
     p.setAttribute('class', 'w-auto text-sm font-bold text-black md:text-lg')
     div2.setAttribute('class', 'h-auto w-auto flex justify-center items-center')
@@ -1273,7 +1276,7 @@ function mainProductsFunc(id, price, discountPercentage, brand, categoryOfProduc
     span3.setAttribute('class', 'text-xs font-semibold text-gray-700 md:text-sm')
     div3.setAttribute('class', 'h-auto w-auto')
     img.src = image
-    p.innerHTML = brand.slice(0, 22)
+    p.innerHTML = title
     span.innerHTML = categoryOfProduct
     span2.innerHTML += `$` + price
     span3.innerHTML += discountPercentage + '% Off'
@@ -1281,18 +1284,17 @@ function mainProductsFunc(id, price, discountPercentage, brand, categoryOfProduc
     div3.appendChild(span3)
     //div2.appendChild(span)
     //div2.appendChild(div3)
-    div.appendChild(img)
-    div.appendChild(p)
-    div.appendChild(span)
-    div.appendChild(div2)
-    div.appendChild(div3)
-    mainProductsDiv.appendChild(div)
-    footer.classList.toggle('hidden')
+    anchor.appendChild(img)
+    anchor.appendChild(p)
+    anchor.appendChild(span)
+    anchor.appendChild(div2)
+    anchor.appendChild(div3)
+    mainProductsDiv.appendChild(anchor)
 }
 
 
-function otherProductsFunc1(id, price, discountPercentage, brand, categoryOfProduct, image) {
-    const div = document.createElement('div') //main div
+function otherProductsFunc1(id, price, discountPercentage, title, categoryOfProduct, image) {
+    const anchor = document.createElement('a') //main div
     const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
     const div3 = document.createElement('div') //This div is for price and discount only
     const img = document.createElement('img') //img of product
@@ -1301,8 +1303,8 @@ function otherProductsFunc1(id, price, discountPercentage, brand, categoryOfProd
     const span2 = document.createElement('span')//price
     const span3 = document.createElement('span')//discount
 
-    div.setAttribute('class', 'group h-52 p-1 w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:w-[30vw] lg:w-[20vw] xl:w-[15vw]')
-    div.id = id
+    anchor.setAttribute('class', 'group h-52 p-1 w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:w-[30vw] lg:w-[20vw] xl:w-[15vw]')
+    anchor.href =`./singleproduct.html?param=${id}`
     img.setAttribute('class', 'h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
     p.setAttribute('class', 'w-auto text-sm font-bold text-black md:text-lg')
     div2.setAttribute('class', 'h-auto w-auto flex justify-center items-center')
@@ -1311,7 +1313,7 @@ function otherProductsFunc1(id, price, discountPercentage, brand, categoryOfProd
     span3.setAttribute('class', 'text-xs font-semibold text-gray-700 md:text-sm')
     div3.setAttribute('class', 'h-auto w-auto')
     img.src = image
-    p.innerHTML = brand.slice(0, 22)
+    p.innerHTML = title
     span.innerHTML = categoryOfProduct
     span2.innerHTML += `$` + price
     span3.innerHTML += discountPercentage + '% Off'
@@ -1319,18 +1321,18 @@ function otherProductsFunc1(id, price, discountPercentage, brand, categoryOfProd
     div3.appendChild(span3)
     //div2.appendChild(span)
     //div2.appendChild(div3)
-    div.appendChild(img)
-    div.appendChild(p)
-    div.appendChild(span)
-    div.appendChild(div2)
-    div.appendChild(div3)
-    otherProductsDiv.appendChild(div)
-    footer.classList.toggle('hidden')
+    anchor.appendChild(img)
+    anchor.appendChild(p)
+    anchor.appendChild(span)
+    anchor.appendChild(div2)
+    anchor.appendChild(div3)
+    otherProductsDiv.appendChild(anchor)
+    //footer.classList.toggle('hidden')
 }
 
 
-function otherProductsFunc2(id, price, discountPercentage, brand, categoryOfProduct, image) {
-    const div = document.createElement('div') //main div
+function otherProductsFunc2(id, price, discountPercentage, title, categoryOfProduct, image) {
+    const anchor = document.createElement('a') //main div
     const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
     const div3 = document.createElement('div') //This div is for price and discount only
     const img = document.createElement('img') //img of product
@@ -1339,8 +1341,8 @@ function otherProductsFunc2(id, price, discountPercentage, brand, categoryOfProd
     const span2 = document.createElement('span')//price
     const span3 = document.createElement('span')//discount
 
-    div.setAttribute('class', 'group h-52 p-1 w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:w-[30vw] lg:w-[20vw] xl:w-[15vw]')
-    div.id = id
+    anchor.setAttribute('class', 'group h-52 p-1 w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:w-[30vw] lg:w-[20vw] xl:w-[15vw]')
+    anchor.href =`./singleproduct.html?param=${id}`
     img.setAttribute('class', 'h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
     p.setAttribute('class', 'w-auto text-sm font-bold text-black md:text-lg')
     div2.setAttribute('class', 'h-auto w-auto flex justify-center items-center')
@@ -1349,7 +1351,7 @@ function otherProductsFunc2(id, price, discountPercentage, brand, categoryOfProd
     span3.setAttribute('class', 'text-xs font-semibold text-gray-700 md:text-sm')
     div3.setAttribute('class', 'h-auto w-auto')
     img.src = image
-    p.innerHTML = brand.slice(0, 22)
+    p.innerHTML = title
     span.innerHTML = categoryOfProduct
     span2.innerHTML += `$` + price
     span3.innerHTML += discountPercentage + '% Off'
@@ -1357,11 +1359,11 @@ function otherProductsFunc2(id, price, discountPercentage, brand, categoryOfProd
     div3.appendChild(span3)
     //div2.appendChild(span)
     //div2.appendChild(div3)
-    div.appendChild(img)
-    div.appendChild(p)
-    div.appendChild(span)
-    div.appendChild(div2)
-    div.appendChild(div3)
-    otherProductsDiv.appendChild(div)
+    anchor.appendChild(img)
+    anchor.appendChild(p)
+    anchor.appendChild(span)
+    anchor.appendChild(div2)
+    anchor.appendChild(div3)
+    otherProductsDiv.appendChild(anchor)
     footer.classList.toggle('hidden')
 }

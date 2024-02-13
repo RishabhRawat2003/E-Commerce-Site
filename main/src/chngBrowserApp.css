@@ -47,3 +47,9 @@
     display: none;
 }
 
+.imagesDiv{
+    scrollbar-width: none;   
+}
+.imagesDiv::-webkit-scrollbar{
+    display: none;
+}

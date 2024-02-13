@@ -35,6 +35,7 @@ const productsOfCategories = async (category) => {
 
 
 let all_Products = allProducts()
+console.log(all_Products)
 
 let single_Product = singleProductById()
 //console.log(single_Product)
@@ -203,15 +204,15 @@ all_Products.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-   allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,image)
+   allProductShowcase(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
-function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,image){
-  const div = document.createElement('div') //main div
+function allProductShowcase(id,price,discountPercentage,title,categoryOfProduct,image){
+  const anchor = document.createElement('a') //main 
   const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
   const div3 = document.createElement('div') //This div is for price and discount only
   const img = document.createElement('img') //img of product
@@ -220,8 +221,8 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
-  div.id = id
+  anchor.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  anchor.href =`./singleproduct.html?param=${id}`
   img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-sm font-bold text-black md:text-lg')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
@@ -230,7 +231,7 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
   span3.setAttribute('class','text-xs font-semibold text-gray-700  md:text-sm')
   div3.setAttribute('class','h-auto w-auto')
   img.src = image
-  p.innerHTML = brand
+  p.innerHTML = title
   span.innerHTML = categoryOfProduct
   span2.innerHTML += `$` + price
   span3.innerHTML +=  discountPercentage +'% Off'
@@ -238,12 +239,12 @@ function allProductShowcase(id,price,discountPercentage,brand,categoryOfProduct,
   div3.appendChild(span3)
   //div2.appendChild(span)
   //div2.appendChild(div3)
-  div.appendChild(img)
-  div.appendChild(p)
-  div.appendChild(span)
-  div.appendChild(div2)
-  div.appendChild(div3)
-  mainAllProducts.appendChild(div)
+  anchor.appendChild(img)
+  anchor.appendChild(p)
+  anchor.appendChild(span)
+  anchor.appendChild(div2)
+  anchor.appendChild(div3)
+  mainAllProducts.appendChild(anchor)
 }
 
 
@@ -275,16 +276,16 @@ searchShoesProducts.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allShoesProducts(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
 
-function allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,image){
-  const div = document.createElement('div') //main div
+function allShoesProducts(id,price,discountPercentage,title,categoryOfProduct,image){
+  const anchor = document.createElement('a') //main 
   const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
   const div3 = document.createElement('div') //This div is for price and discount only
   const img = document.createElement('img') //img of product
@@ -293,8 +294,8 @@ function allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,im
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
-  div.id = id
+  anchor.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  anchor.href =`./singleproduct.html?param=${id}`
   img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-sm font-bold text-black md:text-lg')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
@@ -303,7 +304,7 @@ function allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,im
   span3.setAttribute('class','text-xs font-semibold text-gray-700 md:text-sm')
   div3.setAttribute('class','h-auto w-auto')
   img.src = image
-  p.innerHTML = brand
+  p.innerHTML = title
   span.innerHTML = categoryOfProduct
   span2.innerHTML += `$` + price
   span3.innerHTML += discountPercentage +'% Off'
@@ -311,12 +312,12 @@ function allShoesProducts(id,price,discountPercentage,brand,categoryOfProduct,im
   div3.appendChild(span3)
   //div2.appendChild(span)
   //div2.appendChild(div3)
-  div.appendChild(img)
-  div.appendChild(p)
-  div.appendChild(span)
-  div.appendChild(div2)
-  div.appendChild(div3)
-  shoesProducts.appendChild(div)
+  anchor.appendChild(img)
+  anchor.appendChild(p)
+  anchor.appendChild(span)
+  anchor.appendChild(div2)
+  anchor.appendChild(div3)
+  shoesProducts.appendChild(anchor)
 }
 
 const leftArrow1 = document.querySelector('.leftArrow1')
@@ -351,10 +352,10 @@ mens_watches.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allWatchesProducts(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
@@ -365,15 +366,15 @@ womens_watches.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allWatchesProducts(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
-function allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,image){
-  const div = document.createElement('div') //main div
+function allWatchesProducts(id,price,discountPercentage,title,categoryOfProduct,image){
+  const anchor = document.createElement('a') //main 
   const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
   const div3 = document.createElement('div') //This div is for price and discount only
   const img = document.createElement('img') //img of product
@@ -382,8 +383,8 @@ function allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
-  div.id = id
+  anchor.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  anchor.href =`./singleproduct.html?param=${id}`
   img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-sm font-bold text-black md:text-lg')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
@@ -392,7 +393,7 @@ function allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,
   span3.setAttribute('class','text-xs font-semibold text-gray-700 md:text-sm')
   div3.setAttribute('class','h-auto w-auto')
   img.src = image
-  p.innerHTML = brand
+  p.innerHTML = title
   span.innerHTML = categoryOfProduct
   span2.innerHTML += `$` + price
   span3.innerHTML += discountPercentage +'% Off'
@@ -400,12 +401,12 @@ function allWatchesProducts(id,price,discountPercentage,brand,categoryOfProduct,
   div3.appendChild(span3)
   //div2.appendChild(span)
   //div2.appendChild(div3)
-  div.appendChild(img)
-  div.appendChild(p)
-  div.appendChild(span)
-  div.appendChild(div2)
-  div.appendChild(div3)
-  watchesProducts.appendChild(div)
+  anchor.appendChild(img)
+  anchor.appendChild(p)
+  anchor.appendChild(span)
+  anchor.appendChild(div2)
+  anchor.appendChild(div3)
+  watchesProducts.appendChild(anchor)
 }
 
 const leftArrow2 = document.querySelector('.leftArrow2')
@@ -439,10 +440,10 @@ mens_Shirt.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allMensAccessories(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
@@ -453,15 +454,15 @@ mens_fragrence.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allMensAccessories(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
-function allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image){
-  const div = document.createElement('div') //main div
+function allMensAccessories(id,price,discountPercentage,title,categoryOfProduct,image){
+  const anchor = document.createElement('a') //main 
   const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
   const div3 = document.createElement('div') //This div is for price and discount only
   const img = document.createElement('img') //img of product
@@ -470,8 +471,8 @@ function allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
-  div.id = id
+  anchor.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  anchor.href =`./singleproduct.html?param=${id}`
   img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-sm font-bold text-black md:text-lg')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
@@ -480,7 +481,7 @@ function allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,
   span3.setAttribute('class','text-xs font-semibold text-gray-700 md:text-sm')
   div3.setAttribute('class','h-auto w-auto')
   img.src = image
-  p.innerHTML = brand.slice(0,22)
+  p.innerHTML = title
   span.innerHTML = categoryOfProduct
   span2.innerHTML += `$` + price
   span3.innerHTML += discountPercentage +'% Off'
@@ -488,12 +489,12 @@ function allMensAccessories(id,price,discountPercentage,brand,categoryOfProduct,
   div3.appendChild(span3)
   //div2.appendChild(span)
   //div2.appendChild(div3)
-  div.appendChild(img)
-  div.appendChild(p)
-  div.appendChild(span)
-  div.appendChild(div2)
-  div.appendChild(div3)
-  mensAccessories.appendChild(div)
+  anchor.appendChild(img)
+  anchor.appendChild(p)
+  anchor.appendChild(span)
+  anchor.appendChild(div2)
+  anchor.appendChild(div3)
+  mensAccessories.appendChild(anchor)
 }
 
 const leftArrow3 = document.querySelector('.leftArrow3')
@@ -529,10 +530,10 @@ women_dresses.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allWomensAccessories(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
@@ -543,10 +544,10 @@ womens_tops.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allWomensAccessories(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
@@ -557,15 +558,15 @@ women_bags.then((val)=>{
     const id = items.id
     const price = items.price
     const discountPercentage = items.discountPercentage
-    const brand = items.brand
+    const title = items.title.slice(0,22)
     const categoryOfProduct = items.category 
     const image = items.thumbnail
-    allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image)
+    allWomensAccessories(id,price,discountPercentage,title,categoryOfProduct,image)
   })
 })
 
-function allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduct,image){
-  const div = document.createElement('div') //main div
+function allWomensAccessories(id,price,discountPercentage,title,categoryOfProduct,image){
+  const anchor = document.createElement('a') //main 
   const div2 = document.createElement('div') //In this div brand and price and discount will be shown 
   const div3 = document.createElement('div') //This div is for price and discount only
   const img = document.createElement('img') //img of product
@@ -574,8 +575,8 @@ function allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduc
   const span2 = document.createElement('span')//price
   const span3 = document.createElement('span')//discount
 
-  div.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
-  div.id = id
+  anchor.setAttribute('class','group h-52 p-1 min-w-[40vw] flex flex-col justify-center items-center border-2 border-gray-400 active:bg-slate-200 lg:hover:bg-slate-200 hover:cursor-pointer overflow-hidden sm:min-w-[30vw] lg:min-w-[20vw] xl:min-w-[15vw]')
+  anchor.href =`./singleproduct.html?param=${id}`
   img.setAttribute('class','h-32 w-full object-contain lg:group-hover:scale-105 hover:object-contain duration-200')
   p.setAttribute('class','w-auto text-sm font-bold text-black md:text-lg')
   div2.setAttribute('class','h-auto w-auto flex justify-center items-center')
@@ -584,7 +585,7 @@ function allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduc
   span3.setAttribute('class','text-xs font-semibold text-gray-700 md:text-sm')
   div3.setAttribute('class','h-auto w-auto')
   img.src = image
-  p.innerHTML = brand
+  p.innerHTML = title
   span.innerHTML = categoryOfProduct
   span2.innerHTML += `$` + price
   span3.innerHTML += discountPercentage +'% Off'
@@ -592,12 +593,12 @@ function allWomensAccessories(id,price,discountPercentage,brand,categoryOfProduc
   div3.appendChild(span3)
   //div2.appendChild(span)
   //div2.appendChild(div3)
-  div.appendChild(img)
-  div.appendChild(p)
-  div.appendChild(span)
-  div.appendChild(div2)
-  div.appendChild(div3)
-  womensAccessories.appendChild(div)
+  anchor.appendChild(img)
+  anchor.appendChild(p)
+  anchor.appendChild(span)
+  anchor.appendChild(div2)
+  anchor.appendChild(div3)
+  womensAccessories.appendChild(anchor)
 }
 
 const leftArrow4 = document.querySelector('.leftArrow4')
