@@ -60,3 +60,10 @@
 .othersRelatedProductsSlider::-webkit-scrollbar{
     display: none;
 }
+
+.suggestionDropdown{
+    scrollbar-width: none;   
+}
+.suggestionDropdown::-webkit-scrollbar{
+    display: none;
+}
