@@ -685,3 +685,10 @@ rightArrow4.addEventListener('click', function (e) {
 
 //Watches Products Slider Functionality Ends
 
+
+window.addEventListener('scroll', function() {
+  var scrollHeight = window.scrollY;
+  if(scrollHeight>4){
+    suggestionDropdown.classList.add('hidden')
+  }
+});
