@@ -50,6 +50,58 @@ let products_Categories = productsOfCategories('mens-Watches')
 //console.log(products_Categories)
 
 
+
+// Header Functionality
+
+const category_li = document.querySelector('.category')
+const category_Icon = document.querySelector('.categoryIcon')
+const category_Dropdown = document.querySelector('.dropdown')
+const icon = document.querySelector('.icon')
+const sidebar = document.querySelector('.sidebar')
+
+
+
+icon.addEventListener('click', function (e) {
+  e.preventDefault()
+  if (icon.classList.contains('fa-bars')) {
+    icon.classList.toggle('fa-xmark')
+    sidebar.classList.toggle('hidden')
+  }
+})
+
+category_li.addEventListener('click', function (e) {
+  e.preventDefault()
+  category_li.classList.toggle('text-black')
+  category_Icon.classList.toggle('fa-rotate-180')
+  category_Dropdown.classList.toggle('md:top-16')
+  category_Dropdown.classList.toggle('xl:top-[8vh]')
+  category_Dropdown.classList.toggle('2xl:top-16')
+
+})
+
+
+
+all_Categories.then((val) => {
+  const all_Catg = val
+  all_Catg.map((items) => {
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    const all_items = capitalizeFirstLetter(items)
+    categories_Items(all_items)
+  })
+})
+
+function categories_Items(items) {
+  const anchor = document.createElement('a')
+  anchor.innerHTML = items
+  anchor.href = `someproducts.html?param=${items}`
+  anchor.setAttribute('class', 'text-white select-none cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
+  category_Dropdown.appendChild(anchor)
+}
+
+//Search Functionality
+
 let inputBox = document.querySelector('.inputField')
 let suggestionDropdown = document.querySelector('.suggestionDropdown')
 let productsArray = []
@@ -116,55 +168,6 @@ function logPosition() {
 
 logPosition();
 window.addEventListener('resize', logPosition);
-
-// Header Functionality
-
-const category_li = document.querySelector('.category')
-const category_Icon = document.querySelector('.categoryIcon')
-const category_Dropdown = document.querySelector('.dropdown')
-const icon = document.querySelector('.icon')
-const sidebar = document.querySelector('.sidebar')
-
-
-
-icon.addEventListener('click', function (e) {
-  e.preventDefault()
-  if (icon.classList.contains('fa-bars')) {
-    icon.classList.toggle('fa-xmark')
-    sidebar.classList.toggle('hidden')
-  }
-})
-
-category_li.addEventListener('click', function (e) {
-  e.preventDefault()
-  category_li.classList.toggle('text-black')
-  category_Icon.classList.toggle('fa-rotate-180')
-  category_Dropdown.classList.toggle('md:top-16')
-  category_Dropdown.classList.toggle('xl:top-[8vh]')
-  category_Dropdown.classList.toggle('2xl:top-16')
-
-})
-
-
-
-all_Categories.then((val) => {
-  const all_Catg = val
-  all_Catg.map((items) => {
-    function capitalizeFirstLetter(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-    const all_items = capitalizeFirstLetter(items)
-    categories_Items(all_items)
-  })
-})
-
-function categories_Items(items) {
-  const anchor = document.createElement('a')
-  anchor.innerHTML = items
-  anchor.href = `someproducts.html?param=${items}`
-  anchor.setAttribute('class', 'text-white select-none cursor-pointer font-semibold hover:text-black hover:underline underline-offset-2')
-  category_Dropdown.appendChild(anchor)
-}
 
 
 

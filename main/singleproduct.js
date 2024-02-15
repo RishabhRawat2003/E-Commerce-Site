@@ -15,6 +15,12 @@ const productsOfCategories = async (category) => {
     const result = await response.json()
     return result
 }
+const allProductsCategories = async () => {
+
+    const response = await fetch('https://dummyjson.com/products/categories')
+    const result = await response.json()
+    return result
+  }
 
 
 
@@ -571,3 +577,74 @@ function otherProductsFunc(id, price, discountPercentage, title, categoryOfProdu
     otherProductsSlider.appendChild(anchor)
 
 }
+
+
+//Search Functionality
+
+let all_Categories = allProductsCategories()
+let inputBox = document.querySelector('.inputField')
+let suggestionDropdown = document.querySelector('.suggestionDropdown')
+let productsArray = []
+
+all_Categories.then((val) => {
+  val.map((items) => {
+    productsArray.push(items)
+  })
+})
+
+
+function showSuggestions(input) {
+    suggestionDropdown.classList.remove('hidden')
+    suggestionDropdown.innerHTML = '';
+    productsArray.forEach(suggestion => {
+      if (suggestion.toLowerCase().startsWith(input.toLowerCase())) {
+        const item = document.createElement('div');
+        item.setAttribute('class','md:hover:bg-slate-400 active:bg-slate-400 cursor-pointer px-2')
+        item.textContent = suggestion;
+        item.addEventListener('click', function () {
+          inputBox.value = suggestion;
+          suggestionDropdown.innerHTML = '';
+          suggestionDropdown.classList.add('hidden')
+        });
+        suggestionDropdown.appendChild(item);
+      }
+    });
+}
+
+
+inputBox.addEventListener('keyup',function(e){
+  e.preventDefault()
+  if(e.key==='Enter'){
+    let first = inputBox.value.charAt(0).toUpperCase()
+    let url = first + inputBox.value.slice(1,)
+    window.location.href = `someproducts.html?param=${url}`
+  }
+})
+
+
+if(window.location.reload){
+  inputBox.value = ''
+}
+
+// Event listener for input
+inputBox.addEventListener('input', function () {
+  showSuggestions(this.value);
+});
+
+
+function logPosition() {
+  const rect = inputBox.getBoundingClientRect();
+  let top = Math.floor(rect.top)
+  let left = Math.floor(rect.left)
+  let right = Math.floor(rect.right)
+  let bottom = Math.floor(rect.bottom)
+  let width = Math.floor(rect.width)
+  suggestionDropdown.style.width = `${width}px`
+  //suggestionDropdown.style.top = `${top + 25}px`
+  suggestionDropdown.style.left = `${left + 1}px`
+  suggestionDropdown.style.bottom = `${bottom}px`
+  suggestionDropdown.style.right = `${right}px`
+}
+
+logPosition();
+window.addEventListener('resize', logPosition);

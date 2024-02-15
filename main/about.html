@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Style Products List</title>
+    <title>Shop Style About Section</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-
 <body class="bg-slate-200">
     <!--Header Starts-->
     <header class="select-none h-auto w-full top-0">
-        <nav class="w-full h-16 bg-blue-500 flex justify-between relative z-30">
+        <nav class="w-full h-16 bg-blue-500 flex justify-center items-center relative z-30">
             <div class="h-16 w-40 flex justify-center items-center sm:mx-5">
                 <a href="./index.html" class="flex flex-col justify-center items-center cursor-pointer">
                     <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
                     <span class="text-[10px] mx-2 italic font-serif sm:text-sm">Shop For Quality</span>
                 </a>
             </div>
-            <div class="h-16 w-auto mx-10 flex justify-center items-center md:mr-3">
-                <input type="text"
-                    class="inputField w-36 h-6 border-black border-[1px] outline-none text-sm bg-slate-100 p-2 sm:w-44 sm:h-7 md:w-52 lg:w-56 lg:text-lg xl:w-60 2xl:w-72"
-                    placeholder="Search For Products">
-            </div>
         </nav>
     </header>
     <!--suggestion dropdown Starts-->
-    <div class="suggestionDropdown w-36 h-28 rounded-sm bg-slate-100 absolute gap-1 top-11 left-48 z-40 hidden overflow-scroll sm:top-[46px]"></div>
-    <!--suggestion dropdown Ends-->
-    <!--Header Ends-->
 
-    <!--Main Content Starts-->
-    <div class="mainContent h-auto w-[98%] mx-auto my-2 rounded-lg flex flex-col py-3 bg-white">
-        <h1 class="header text-lg font-semibold font-serif mx-4 my-2 md:text-xl md:font-bold 2xl:text-2xl"></h1>
-        <div class="h-auto w-auto flex flex-col">
-            <div
-                class="mainProducts h-auto w-auto flex flex-wrap justify-center items-center my-2 gap-2 lg:px-4 xl:gap-5">
-            </div>
-            <div class="h-auto w-auto flex-col">
-                <h1 class="header2 text-lg font-semibold font-serif mx-4 my-2 md:text-xl md:font-bold 2xl:text-2xl">
-                </h1>
-                <div
-                    class="otherProducts h-auto w-auto flex flex-wrap justify-center items-center py-2 my-2 gap-2 xl:gap-5 xl:px-5">
-                </div>
-            </div>
+    <!--Main About Section Starts-->
+    <div class="w-[97%] h-auto mx-auto my-2 py-2 px-2 bg-white rounded-lg font-serif">
+        <h1 class="font-bold text-center text-xl md:text-3xl">About</h1>
+        <div class="w-full h-auto flex flex-col">
+            <h1 class="mx-2 text-base mt-5 md:text-xl xl:text-2xl">1. Introduction</h1>
+            <p class="text-sm mx-2 my-2 md:text-lg lg:text-xl 2xl:text-2xl">Hello Everyone, I am Rishabh Rawat and I am the one who made this site. I have deep Interest in Front end development and this is one of my project. I have made this site just for my own practice. </p>
+        </div>
+        <div class="w-full h-auto flex flex-col">
+            <h1 class="mx-2 text-base mt-5 md:text-xl xl:text-2xl">2. About This Site</h1>
+            <p class="text-sm mx-2 my-2 md:text-lg lg:text-xl 2xl:text-2xl">I have made this project by using an API (<a class="text-blue-900" href="https://dummyjson.com/docs/products">API Link</a>). Everything in this site is coming from this API except Auto Image Slider in The Home Page. </p>
+        </div>
+        <div class="w-full h-auto flex flex-col">
+            <h1 class="mx-2 text-base mt-5 md:text-xl xl:text-2xl">3. What Functionality Works</h1>
+            <p class="text-sm mx-2 my-2 md:text-lg lg:text-xl 2xl:text-2xl">Almost Everything in this site works. for example :- (a) If you click in the more products Button in Home page You will get All Products of that particular category. (b) You can also search for the products but only those products will come which is suggested in search Box because those are the products which is coming from API.</p>
+        </div>
+        <div class="w-full h-auto flex flex-col">
+            <h1 class="mx-2 text-base mt-5 md:text-xl xl:text-2xl">4. What Functionality Doesn't Works</h1>
+            <p class="text-sm mx-2 my-2 md:text-lg lg:text-xl 2xl:text-2xl">Login Page is not in a Working Phase. Login Page is a dummy Page only.</p>
+        </div>
+        <div class="w-full h-auto flex flex-col">
+            <h1 class="mx-2 text-base mt-5 md:text-xl xl:text-2xl">5. What helps me to build this site.</h1>
+            <p class="text-sm mx-2 my-2 md:text-lg lg:text-xl 2xl:text-2xl">I have used <a class="text-blue-900" href="https://fontawesome.com/search">Font Awesome</a> site to get some Fonts. I have also used Chatgpt for some problems like auto image slider and for search functionality. group companies name in the footer is also suggested by Chatgpt</p>
+        </div>
+        <div class="w-full h-auto flex flex-col">
+            <h1 class="mx-2 text-base mt-5 md:text-xl xl:text-2xl">6. Connect With Me</h1>
+            <p class="text-sm mx-2 my-2 md:text-lg lg:text-xl 2xl:text-2xl">Twitter:- <a class="text-blue-900" href="https://twitter.com/simpleman2003">My X Account</a><br>Github:- <a class="text-blue-900" href="https://github.com/RishabhRawat2003">My Github Account</a></p>
         </div>
     </div>
-    <!--Main Content Ends-->
+    <!--Main About Section Ends-->
 
     <!--Footer Starts-->
-    <footer class="footer select-none hidden h-80 w-full bg-blue-500 lg:h-[45vh]">
+    <footer class=" select-none h-80 w-full bg-blue-500 lg:h-[45vh]">
         <h1 class="lg:hidden">
             <span class="flex flex-col justify-center items-center cursor-pointer">
                 <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
@@ -60,8 +62,7 @@
             <div class="h-full w-32 hidden lg:block">
                 <h1 class="mt-4">
                     <span class="flex flex-col justify-center items-center cursor-pointer">
-                        <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop
-                            Style</span>
+                        <span class="text-lg mx-2 font-bold text-yellow-400 italic font-serif sm:text-xl">Shop Style</span>
                         <span class="text-[10px] mx-2 italic font-serif sm:text-sm">Shop For Quality</span>
                     </span>
                 </h1>
@@ -176,14 +177,8 @@
             </div>
         </div>
         <div class="mt-2 h-[2px] w-full bg-black">
-            <div class="h-11 w-full flex justify-center items-center lg:h-16">
-                <p class="text-white text-sm font-semibold md:text-base xl:text-lg">&#169 2024 Shop Style,Inc.All Right
-                    Reserved</p>
-            </div>
+        <div class="h-11 w-full flex justify-center items-center lg:h-16"><p class="text-white text-sm font-semibold md:text-base xl:text-lg">&#169 2024 Shop Style,Inc.All Right Reserved</p></div>
     </footer>
     <!--Footer Ends-->
-
-    <script src="someproducts.js"></script>
 </body>
-
 </html>

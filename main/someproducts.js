@@ -17,11 +17,19 @@ const allProducts = async () => {
 
 }
 
+const allProductsCategories = async () => {
+
+    const response = await fetch('https://dummyjson.com/products/categories')
+    const result = await response.json()
+    return result
+  }
+
 const header = document.querySelector('.header')
 const header2 = document.querySelector('.header2')
 const footer = document.querySelector('.footer')
 const mainProductsDiv = document.querySelector('.mainProducts')
 const otherProductsDiv = document.querySelector('.otherProducts')
+const mainBody = document.querySelector('.mainContent')
 
 if (paramValue === 'Laptops') {
     const laptops = 'Laptops'
@@ -1254,6 +1262,19 @@ else if (paramValue === 'WomensAccessories') {
         })
     })
 }
+else{
+    const div = document.createElement('div')
+    const p = document.createElement(('p'))
+    const p1 = document.createElement(('p'))
+    div.setAttribute('class','w-full h-[70vh] flex flex-col justify-center items-center')
+    p.setAttribute('class','text-lg font-bold')
+    p1.setAttribute('class','text-sm')
+    p1.innerHTML = 'Note: Search Only Suggested Products'
+    p.innerHTML = `No Product Available of This Name "${paramValue}"`
+    div.appendChild(p)
+    div.appendChild(p1)
+    mainBody.appendChild(div)
+}
 
 
 function mainProductsFunc(id, price, discountPercentage, title, categoryOfProduct, image) {
@@ -1367,3 +1388,76 @@ function otherProductsFunc2(id, price, discountPercentage, title, categoryOfProd
     otherProductsDiv.appendChild(anchor)
     footer.classList.toggle('hidden')
 }
+
+
+
+
+//Search Functionality
+
+let all_Categories = allProductsCategories()
+let inputBox = document.querySelector('.inputField')
+let suggestionDropdown = document.querySelector('.suggestionDropdown')
+let productsArray = []
+
+all_Categories.then((val) => {
+  val.map((items) => {
+    productsArray.push(items)
+  })
+})
+
+
+function showSuggestions(input) {
+    suggestionDropdown.classList.remove('hidden')
+    suggestionDropdown.innerHTML = '';
+    productsArray.forEach(suggestion => {
+      if (suggestion.toLowerCase().startsWith(input.toLowerCase())) {
+        const item = document.createElement('div');
+        item.setAttribute('class','md:hover:bg-slate-400 active:bg-slate-400 cursor-pointer px-2')
+        item.textContent = suggestion;
+        item.addEventListener('click', function () {
+          inputBox.value = suggestion;
+          suggestionDropdown.innerHTML = '';
+          suggestionDropdown.classList.add('hidden')
+        });
+        suggestionDropdown.appendChild(item);
+      }
+    });
+}
+
+
+inputBox.addEventListener('keyup',function(e){
+  e.preventDefault()
+  if(e.key==='Enter'){
+    let first = inputBox.value.charAt(0).toUpperCase()
+    let url = first + inputBox.value.slice(1,)
+    window.location.href = `someproducts.html?param=${url}`
+  }
+})
+
+
+if(window.location.reload){
+  inputBox.value = ''
+}
+
+// Event listener for input
+inputBox.addEventListener('input', function () {
+  showSuggestions(this.value);
+});
+
+
+function logPosition() {
+  const rect = inputBox.getBoundingClientRect();
+  let top = Math.floor(rect.top)
+  let left = Math.floor(rect.left)
+  let right = Math.floor(rect.right)
+  let bottom = Math.floor(rect.bottom)
+  let width = Math.floor(rect.width)
+  suggestionDropdown.style.width = `${width}px`
+  //suggestionDropdown.style.top = `${top + 25}px`
+  suggestionDropdown.style.left = `${left + 1}px`
+  suggestionDropdown.style.bottom = `${bottom}px`
+  suggestionDropdown.style.right = `${right}px`
+}
+
+logPosition();
+window.addEventListener('resize', logPosition);
